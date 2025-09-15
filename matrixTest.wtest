@@ -4,13 +4,32 @@ describe "Testeamos a Neo" {
   test "Neo es el elegido" {
     assert.that(neo.esElElegido())
   }
-
+  
   test "Vitalidad inicial de Neo" {
     assert.equals(10, neo.vitalidad())
   }
-
+  
   test "Vitalidad de Neo despues de un salto" {
     neo.saltar()
     assert.equals(5, neo.vitalidad())
+  }
+}
+
+describe "Testeamos a Morfeo" {
+  test "Morfeo es el elegido" {
+    assert.notThat(morfeo.esElElegido())
+  }
+  
+  test "Vitalidad inicial de Morfeo" {
+    assert.equals(8, morfeo.vitalidad())
+  }
+  
+  test "Vitalidad y cansancio de Morfeo despues de un salto" {
+    morfeo.saltar()
+    assert.equals(7, morfeo.vitalidad())
+    assert.that(morfeo.estaCansado())
+    morfeo.saltar()
+    assert.equals(6, morfeo.vitalidad())
+    assert.notThat(morfeo.estaCansado())
   }
 }
