@@ -25,3 +25,13 @@ object morfeo {
   
   method estaCansado() = cansado
 }
+
+object trinity {
+  method vitalidad() = 0
+  
+  method saltar() {
+    
+  }
+  
+  method esElElegido() = false
+}

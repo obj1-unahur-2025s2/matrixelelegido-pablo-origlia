@@ -33,3 +33,20 @@ describe "Testeamos a Morfeo" {
     assert.notThat(morfeo.estaCansado())
   }
 }
+
+describe "Testeamos a Trinity" {
+  test "Trinity no es el elegido" {
+    assert.notThat(trinity.esElElegido())
+  }
+  
+  test "Vitalidad inicial de Trinity" {
+    assert.equals(0, trinity.vitalidad())
+  }
+  
+  test "Vitalidad de Trinity despues de un salto" {
+    trinity.saltar()
+    trinity.saltar()
+    trinity.saltar()
+    assert.equals(0, trinity.vitalidad())
+  }
+}
