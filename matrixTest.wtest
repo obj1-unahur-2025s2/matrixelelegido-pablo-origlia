@@ -50,3 +50,13 @@ describe "Testeamos a Trinity" {
     assert.equals(0, trinity.vitalidad())
   }
 }
+
+describe "Testeamos la nave" {
+  test "Cantidad de pasajeros incial de la nave" {
+    assert.equals(3, nave.cantidadDePasajeros())
+  }
+
+  test "Pasajero de mayor vitalidad al inicio" {
+    assert.equals(neo, nave.pasajeroConMayorVitalidad())
+  }
+}
